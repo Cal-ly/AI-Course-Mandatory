@@ -106,6 +106,9 @@ We will not do that
 We can see, that we don't have any *missing* values, however this is because 0 has been inserted. Also we have *float64* in four of the columns and an *object* in the last.
 This means that, we have to consider how to handle the feature `State`, in some way. Since the dataset is very small, we would rather remove the `State` feature to begin with, since regression on small sets - even though they might yield a good performance (RMSE) - often will perform badly in real-life enviroments.
 
-[]
+#### Histogram over features
+[Image](/data/data_exploration_histogram.png)
+
+
 
 ### **Task Identify the Target label:**
