@@ -23,3 +23,11 @@ print("Missing Values:\n", data_exploration.isnull().sum())
 
 # Get summary statistics
 data_exploration.describe()
+
+# Plot histograms of the numerical columns
+data_exploration.hist(figsize=(12, 8), bins=30)
+plt.show()
+
+# Plot a bar chart of the 'State' column, how many times each state appears
+data_exploration['State'].value_counts().plot(kind='bar')
+plt.show()
