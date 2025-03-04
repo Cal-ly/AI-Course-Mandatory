@@ -108,7 +108,8 @@ This means that, we have to consider how to handle the feature `State`, in some 
 
 #### Histogram over features
 [Image](/data/data_exploration_histogram.png)
-
-
+The histogram shows the distribution of each feature in the dataset. It helps to visualize the spread and central tendency of the data, identify any skewness, and detect outliers. This is crucial for understanding the data before applying any machine learning algorithms. 
 
 ### **Task Identify the Target label:**
+**Profit!!**
+
