@@ -39,3 +39,13 @@ corr_matrix = data_exploration_no_state.corr()
 plt.figure(figsize=(8, 6))
 sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt='.2f')
 plt.savefig('data/correlation_matrix.png')
+
+# Plot scatter plots of ALL the numerical columns
+all_columns = ['R&D Spend', 'Marketing Spend', 'Profit', 'Administration']
+sns.pairplot(data_exploration_no_state[all_columns])
+plt.savefig('data/scatter_plots_all.png')
+
+# Plot scatter plots of the numerical columns
+promising_columns = ['R&D Spend', 'Marketing Spend']
+sns.pairplot(data_exploration_no_state[promising_columns])
+plt.savefig('data/scatter_plots.png')
