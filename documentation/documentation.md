@@ -97,5 +97,12 @@ dataset.head()        # Display the first few rows
 ## **Step 3 - Data exploration**
 
 ### **Task 1 Create Copy for Data exploration:**
+See [Data Exploration Script](/src/data_exploration.py)
 
+### **Task 2 Create Notebook:**
+We will not do that
+
+### **Task 3 Study Each attribute and charateristics**
+We can see, that we don't have any *missing* values, however this is because 0 has been inserted. Also we have *float64* in four of the columns and an *object* in the last.
+This means that, we have to consider how to handle the feature `State`, in some way.
 
