@@ -45,9 +45,6 @@ logging.info(dataset.describe())
 # Drop the categorical "State" feature as initially suggested by the assignment
 dataset = dataset.drop("State", axis=1)
 
-# Step 2: Create a stratified test set (here, simple split since data is small)
-train_set, test_set = train_test_split(dataset, test_size=0.2, random_state=42)
-
 # Step 3: Explore data – Understand data distribution
 logging.info("\nHistograms of numerical attributes:")
 dataset.hist(bins=20, figsize=(12, 8))
@@ -142,11 +139,20 @@ The higher the coefficient, the more impact the feature has on the target variab
 it means that as the feature increases, the target variable decreases. In this case, R&D Spend has the highest positive
 impact on Profit, followed by Marketing Spend. Administration has a negative impact on Profit.
 We can use this information to identify which features are most relevant for predicting the target variable.
-Model-wise, the Linear Regression model has an RMSE of 8995.91 on the test set, which indicates the average error in
+Model-wise, the Linear Regression model has an RMSE of 9247.92 on the test set, which indicates the average error in
 predicted Profit values. The model's generalization performance is estimated using cross-validation, with an average RMSE
 of 9546.94. This provides a more robust evaluation of the model's performance on unseen data.
 Comparing the results of the test set and cross-validation helps ensure the model's reliability and generalization ability.
 The model has a slightly worse performance on the cross-validation set, which is expected due to the smaller training set size.
+
+Model Evaluation:
+- The model's performance is evaluated using Root Mean Squared Error (RMSE) on the test set.
+- The RMSE value of 9247.92 indicates the average error in predicted Profit values.
+- Cross-validation is used to estimate the model's generalization performance, with an average RMSE of 9546.94.
+- The feature importance analysis reveals the impact of each feature on the target variable (Profit).
+- R&D Spend has the highest positive impact on Profit, followed by Marketing Spend, while Administration has a negative impact.
+- The model's coefficients provide insights into the relationship between features and the target variable.
+- The model's performance is acceptable, but further optimization and feature engineering could improve predictions.
 '''	
 
 # Plot Actual vs. Predicted Profits to visually inspect prediction accuracy
